@@ -1,0 +1,69 @@
+<html>
+	<head>
+		<title> Compra de Exemplares  </title>
+		<meta charset="UTF-8">
+		<script language="javascript" src="script.js"></script>
+	</head>
+
+	<body>
+		<h1> Aquisição </h1>
+
+	<form method="post" id="aquisicao" action="mailto:dianaoliveira1d@gmail.com" oninput="calcula_total()">
+
+		<fieldset><legend>Identificação do Utilizador </legend>
+			<p>Nome: <input type="text" name="nnome" id="inome" size="80" maxlength="90" placeholder="Nome Completo" </p> <!temos o tipo de texto, o nome da caixa e o id o tamanho da caixa, numero maximo de carateres e ainda a mensagem na caixa (quando nao tem nada)>
+			<p>Data de nascimento <input type="date" name="ndata" id="idata"</p>
+				<p><fieldset><legend>Género:</legend>
+					<p> <input type="radio" name="ngenero" id="imasculino"><label for="imasculino"> Masculino </p>
+					<p><input type="radio" name="ngenero" id="ifeminino"><label for="ifeminino"> Feminino </p>
+					<p><input type="radio" name="ngenero" id="iN/D"><label for="iN/D"> Prefiro não revelar </p>
+				</fieldset></p>
+					<fieldset id="Localidade">
+						<legend> Morada do utilizador </legend><p>
+							Rua: <input type="text" name="nrua" id="irua" size="80" maxlength="90" placeholder="Nome da Rua - Apenas para o caso de querer um exemplar"</p>
+							Número: <input type="number" name"nnumero" id="inumero" min="0" max="9999"  placeholder="XXXX"></p>
+							Código Postal: <input type="number" name="ncod1" id="icod1" min="0" max="9999" placeholder="XXXX"> - <input type="number" name="ncod2" id="ncod2" min="0" max="999"placeholder="XXX"></p>
+							<p>Localidade <input type="text" name="nlocalidade" id="ilocalidade"  size="30" min="60" maxlength="90" placeholder="Localidade" list="localidades">
+								<datalist id="localidades">
+									<option value="Maia"></option>
+									<option value="Porto"></option>
+									<option value="Trofa"></option>
+									<option value="Castelo da Maia"></option>
+								</datalist>
+					</fieldset>
+		</fieldset>
+		<fieldset><legend> Livros</legend>
+			<fieldset><legend> Gostaria de receber um exemplar? </legend>
+				<p><input type="radio" name="npergunta" id="iperguntaS"><laber for="iperguntaS"> Sim, gostaria. </label></p>
+				<p><input type="radio" name="npergunta" id="iperguntaN"><laber for="iperguntaN"> Não, Obrigado(a). </label></p>
+					Livro: <select name="nlivro" id="Livro">
+							<option> Escolha o seu exemplar </option>
+							<option> Destiny: The Beginning </option>
+							<option> In The Edge of the Light  </option>
+							<option> Living in the Dark </option>
+						</select>
+				<p><label for= "quantidade"> Quantidade: </label>
+					<input type="number" name="nquantidade" id="iquantidade" min="0" max="99" value="0"</p>
+					<p> Preço a pagar: <input type="text" name="ntotal" id="total" placeholder="0" size="4" readonly="true"> €</p>
+
+			</fieldset>
+			<fieldset><legend> Bónus</legend>
+				<fieldset><legend> Com ou sem autógrafo/dedicatória? </legend>
+					Bónus: <select name="nopcao" id="Opcao">
+							<option> Escolha </option>
+							<option> Com Autógrafo + Dedicatória </option>
+							<option> Só Autógrafo </option>
+							<option> Só Dedicatória </option>
+							<option> Nada, Obrigado(a) </option>
+						</select>
+				</fieldset>
+			</fieldset>
+		</fieldset>
+		<fieldset>
+			<legend> Observações:</legend>
+				<textarea name="nobs" id="iobs" cols="70" rows="10" placeholder="Escreva a sua observação - Texto/nome para a dedicatória, ajustes de morada, etc..."></textarea>
+		</fieldset>
+			<p><input type="submit" value="Enviar">
+			<a href="ola_mundo3.html"><input type="button" value="Retroceder" ></a>
+	</form>
+</html>
